@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Company from './components/pages/Company';
 import Contacto from './components/pages/Contacto';
@@ -22,7 +22,7 @@ function App() {
         <Route path="/newproject" element={<NewProject />} />
       </Routes>
       </Container>
-
+  
       <Footer/>
     </Router>
   );

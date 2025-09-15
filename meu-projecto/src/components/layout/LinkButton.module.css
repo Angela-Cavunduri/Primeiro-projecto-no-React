@@ -1,0 +1,14 @@
+
+
+.btn{
+    background-color: #222;
+  color: white;   /* garante que o texto apareça */
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  text-decoration: none;
+  transform: 0.5s;
+}
+
+.btn:hover{
+    color: #ffbb33;
+}
