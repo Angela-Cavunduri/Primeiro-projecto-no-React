@@ -6,8 +6,23 @@ import {useHistory} from 'react-router-dom'
 function NewProject(){
     const history=useHistory()
 
-    function Createpost(){
+    function Createpost(project){
         //inicialização cost and services
+        project.cost=0
+        project.services=[]
+        fetch('http:localhost:5000/projects',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+            },
+            body:JSON.stringify(project),
+        }).then(
+        (resp=>resp.json())
+        .then((data)=>{
+            console.log(data)
+            //redirect
+        })
+        ).catch(err=>console.log(err))
         
     }
 
@@ -15,7 +30,7 @@ function NewProject(){
         <div className={styles.newproject_container}>
             <h1>Criar projevtos</h1>
             <p>Crie seu preojecto para depois adicionar os seus serviços</p>
-            <ProjectFrom btnText="Criar projecto"/>
+            <ProjectFrom handleSubmit={Createpost} btnText="Criar projecto"/>
         </div>
     )
 }
