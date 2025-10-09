@@ -1,10 +1,10 @@
 import ProjectFrom from '../project/ProjectFrom'
 import styles from './Newproject.module.css'
-import {useHistory} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 
 function NewProject(){
-    const history=useHistory()
+    const navegue=useNavigate()
 
     function Createpost(project){
         //inicialização cost and services
